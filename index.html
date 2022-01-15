@@ -1,0 +1,273 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lofi - Family</title>
+    <link rel="icon" href="./asscets/data/img/logo/cflogopng.png" type="image/x-icon">
+    <link rel="stylesheet" href="./asscets/css/base.css">
+    <link rel="stylesheet" href="./asscets/css/main.css">
+    <link rel="stylesheet" href="./asscets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./asscets/font/fontawesome-free-5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-br">
+            <img src="./asscets/data/img/logo/logo.0cbf9e63.gif" alt="">
+        </div>
+    </div>
+    <!-- Background -->
+    <div class="main-background">
+        <div class="background-day--no-rain">
+            <video src="./asscets/data/video/BDR Day-Christmas ver 112521 (1).mp4" loop muted autoplay></video>
+        </div>
+        <div class="background-night--no-rain none">
+            <video src="./asscets/data/video/BDR STARRY NIGHT - Christmas ver.mp4" loop muted autoplay></video>
+        </div>
+        <div class="background-day--rain none">
+            <video src="./asscets/data/video/BDR RAINY DAY - Christmas ver.mp4" loop muted autoplay></video>
+        </div>
+        <div class="background-night--rain none">
+            <video src="./asscets/data/video/BDR RAINY NIGHT - Christmas ver.mp4" loop muted autoplay></video>
+        </div>
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-logo">
+                    <img src="./asscets/data/img/logo/logo.0cbf9e63.gif" alt="">
+            </div>      
+    
+            <div class="header-nav">
+                <ul class="nav">
+                    <button class="nav-item-btn btn">How it works</button>
+                    <button class="nav-item-btn btn">Pricing</button>
+                
+                    <button class="nav-item-btn btn">Contact us</button>
+                
+                    <button class="nav-item-btn btn">More</button>
+                
+                    <button class="nav-item-btn btn">
+                        Merch
+                        <a href="https://www.shop.lofi.co/"></a> 
+                    </button>
+                    <p class="new-tag">New!</p>                   
+                </ul>
+            </div>
+    
+            <div class="header-toobar">
+                <ul class="toobar">
+                    <li class="toobar-item">
+                        <label class="switch">
+                            <input class="btn-switch" id="day-check" onclick="weatherSwitch()" type="checkbox" checked>
+                                <span class="slider"></span>
+                                <i class="sun-icon far fa-sun"></i>
+                                <i class="moon-icon far fa-moon"></i>
+                        </label>
+                    </li>
+                    <li class="toobar-item">
+                        <input type="checkbox" class="switch-fullscreen">
+                        <img src="./asscets/data/img/fullscreen/fullscreen.png" alt="" class="full-screen">
+                    </li>
+                    <li class="toobar-item">
+                        <button class="share-item-btn toobar-btn btn">Share</button>
+                    </li>
+                    <li class="toobar-item">
+                        <button class="signup-btn toobar-btn btn">Sign up</button>
+                    </li>
+                    <li class="toobar-item">
+                        <button class="login-btn toobar-btn btn">Login</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- BODY CONTENT -->
+        <div class="content">
+            <div class="rain-traffic" style="display: flex; width: 100%; justify-content: space-between;">
+                <label class="traffic-switch">
+                    <input class="btn-switch--traffic" id="traffic-check" onclick="trafficSwitch()" type="checkbox">
+                        <span class="traffic-ckeck"></span>
+                        <span class="traffic-ckecked"></span>
+                        <div class="traffic-title-box">
+                            <div class="traffic-box-volume">
+                                <p class="traffic-title">City Traffic</p>
+                                <input id="traffic-volume" class="traffic-volume" type="range"  value="50" step="1" min="0" max="100">                          
+                            </div>
+                        </div>
+                    <audio src="./asscets/data/music/traffic/traffic.mp3" id="traffic-song"></audio>
+                </label>
+                <label class="rain-switch">
+                    <input class="btn-switch--rain" id="rain-check" onclick="weatherSwitch()" type="checkbox">
+                        <span class="rain-ckeck"></span>
+                        <span class="rain-ckecked"></span>
+                        <div class="rain-title-box">
+                            <div class="rain-box-volume">
+                                <p class="rain-title">City Rain</p>
+                                <input id="rain-volume" class="rain-volume" type="range"  value="50" step="1" min="0" max="100">                            
+                            </div>
+                        </div>
+                        <audio src="./asscets/data/music/weather/rain.mp3" id="rain-song"></audio>
+                </label>
+            </div>
+
+            <!-- Control mix music -->
+            <div class="menu-control">
+                <div class="menu-control-column">
+                    <div class="menu-item">
+                        <div class="mix-menu menu-item--onclick line-item">
+                            <img src="./asscets/data/img/controlMusic/mix.png" alt="" class="mix-img menu-img">
+                        </div>
+                        <div class="border-menu-item"></div>
+
+                        <!-- MIX PANEL -->
+                        <img src="./asscets/data/img/controlMusic/mix/mixPNG/bridge.png" alt="" class="mix-bridge none">
+                        <div class="menu none">
+                            <div class="menu-mix-item">
+                                <h2 class="menu-title">Mood</h2>
+
+                                <source src="./asscets/data/music/song/rapLofi/1.mp3">
+
+                                <div class="mix-category">
+                                    <div class="mix-category-item chill-btn">
+                                        <img src="./asscets/data/img/controlMusic/mix/moon.png" alt="" class="mix-category-img mix-category-item--active">
+                                        <p class="mix-category-item-title mix-category-item--active">Sleepy</p>
+                                    </div>
+                                    <div class="mix-category-item rap-btn">
+                                        <img src="./asscets/data/img/controlMusic/mix/jazz.png" alt="" class="mix-category-img mix-category-item--no-active">
+                                        <p class=" mix-category-item-title">Rap</p>
+                                    </div>
+                                    <div class="mix-category-item rap-lofi-btn">
+                                        <img src="./asscets/data/img/controlMusic/mix/coffee.png" alt="" class="mix-category-img mix-category-item--no-active">
+                                        <p class=" mix-category-item-title">Lofi Rap</p>
+                                    </div>
+                                </div>
+
+                                <div class="mix-volume">
+                                    <img src="./asscets/data/img/controlMusic/mix/lowAudio.png" alt="" class="mix-audio-low-img">
+                                    <input class="song-volume" id="song-volume" type="range" value="60" min="0" max="100" step="1">
+                                    <img src="./asscets/data/img/controlMusic/mix/highAudio.png" alt="" class="mix-audio-high-img">
+                                </div>
+
+                                <!-- Background noises -->
+                                <h2 class="menu-title">Background noises</h2>
+                                <div class="background-noises">
+                                    <div class="mix-noise">
+                                        <p class="mix-noises-name">City Traffic</p>
+                                        <input id="traffic-volume" type="range" value="0" min="0" max="100" step="1">
+                                    </div>
+                                    <div class="mix-noise">
+                                        <p class="mix-noises-name">City Rain</p>
+                                        <input id="rain-volume" type="range" value="0" min="0" max="100" step="1">
+                                    </div>
+                                    <div class="mix-noise mix-noise-js">
+                                        <p class="mix-noises-name">Fireplace</p>
+                                        <input id="mix-fireplace-volume" type="range" value="0" min="0" max="100" step="1">
+                                        <audio src="./asscets/data/music/mixSound/fireplace.mp3" class="mix-fireplace-audio"></audio>
+                                    </div>
+                                    <div class="mix-noise mix-noise-js">
+                                        <p class="mix-noises-name">Forest Sounds</p>
+                                        <input id="mix-forest-volume" type="range" value="0" min="0" max="100" step="1">
+                                        <audio src="./asscets/data/music/mixSound/forest.mp3" class="mix-forest-audio"></audio>
+                                    </div>
+                                    <div class="mix-noise mix-noise-js">
+                                        <p class="mix-noises-name">Forest Rain</p>
+                                        <input id="mix-forestrain-volume" type="range" value="0" min="0" max="100" step="1">
+                                        <audio src="./asscets/data/music/mixSound/forestrain.mp3" class="mix-forestrain-audio"></audio>
+                                    </div>
+                                    <div class="mix-noise mix-noise-js">
+                                        <p class="mix-noises-name">Waves</p>
+                                        <input id="mix-waves-volume" type="range" value="0" min="0" max="100" step="1">
+                                        <audio src="./asscets/data/music/mixSound/waves.mp3" class="mix-waves-audio"></audio>
+                                    </div>
+                                    <div class="mix-noise mix-noise-js">
+                                        <p class="mix-noises-name">Fan</p>
+                                        <input id="mix-fan-volume" type="range" value="0" min="0" max="100" step="1">
+                                        <audio src="./asscets/data/music/mixSound/fan.mp3" class="mix-fan-audio"></audio>
+                                    </div>
+                                    <div class="mix-noise mix-noise-js">
+                                        <p class="mix-noises-name">Summer Storm</p>
+                                        <input id="mix-summerstorm-volume" type="range" value="0" min="0" max="100" step="1">
+                                        <audio src="./asscets/data/music/mixSound/summerstorm.mp3" class="mix-summerstorm-audio"></audio>
+                                    </div>
+                                    <div class="mix-noise mix-noise-js">
+                                        <p class="mix-noises-name">River</p>
+                                        <input id="mix-river-volume" type="range" value="0" min="0" max="100" step="1">
+                                        <audio src="./asscets/data/music/mixSound/river.mp3" class="mix-river-audio"></audio>
+                                    </div>
+                                    <div class="mix-noise mix-noise-js">
+                                        <p class="mix-noises-name">People Talking</p>
+                                        <input id="mix-peopletalking-volume" type="range" value="0" min="0" max="100" step="1">
+                                        <audio src="./asscets/data/music/mixSound/peopletalking.mp3" class="mix-peopletalking-audio"></audio>
+                                    </div>
+                                    <div class="mix-noise mix-noise-js">
+                                        <p class="mix-noises-name">Blizzard</p>
+                                        <input id="mix-blizzard-volume" type="range" value="0" min="0" max="100" step="1">
+                                        <audio src="./asscets/data/music/mixSound/blizzard.mp3" class="mix-blizzard-audio"></audio>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="template-menu menu-item--onclick line-item">
+                            <img src="./asscets/data/img/controlMusic/template.png" alt="" class="template-img menu-img">
+                        </div>
+                        <div class="border-menu-item"></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="brchange-menu menu-item--onclick line-item">
+                            <img src="./asscets/data/img/controlMusic/brChange.png" alt="" class="brchange-img menu-img">
+                        </div>
+                        <div class="border-menu-item"></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="focus-menu menu-item--onclick">
+                            <img src="./asscets/data/img/controlMusic/focusMode.png" alt="" class="focus-img menu-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MUSIC CONTENT -->
+        <div class="music-player">
+            <div class="music">
+                <img src="./asscets/data/img/musicPlayer/prev.png" alt="" id="prev">
+                <img src="./asscets/data/img/musicPlayer/play.png" alt="" id="play" class="play">              
+                <img src="./asscets/data/img/musicPlayer/pause.png" alt="" id="pause" class="pause none">              
+                <img src="./asscets/data/img/musicPlayer/next.png" alt="" id="next">
+            </div>
+            <div class="volume-player">
+                <div class="volume-mix">
+                    <img src="./asscets/data/img/controlMusic/mix/lowAudio.png" alt="" class="audio-low">
+                    <input class="song-volume" id="song-volume" type="range" value="60" min="0" max="100" step="1">
+                    <img src="./asscets/data/img/controlMusic/mix/highAudio.png" alt="" class="audio-high">
+                </div>
+            </div>
+            <audio src="" id="audio"></audio>
+        </div>
+    </div>
+    <source src="./asscets/data/music/song/1.mp3">
+    
+    <!-- MODAL -->
+         <!-- TOTURIAL MODAL -->
+         <div class="toturial">
+            <div class="toturial-modal">
+                <video src="" class="toturial-video"></video>
+                <div class="toturial-bar"></div>
+                <div class="toturial-content">
+                    <h2 class="toturial-heading"></h2>
+                    <p class="toturial-about"></p>
+                    <button class="toturial-next-btn btn">Next</button>
+                    <button class="toturial-leave btn">Leave Toturial</button>
+                </div>
+            </div>
+        </div>
+    
+</body>
+    <script src="./asscets/js/main.js"></script>
+</html>
