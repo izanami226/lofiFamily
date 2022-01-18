@@ -12,13 +12,21 @@
 
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: inherit;
     font-family: 'Roboto', sans-serif;
     
 }
 
+/* body {
+    overflow: hidden;
+} */
+
 p {
     color: var(--color-default);
+}
+
+.mr-t-32 {
+    margin: 32px 0;
 }
 
 /* DISPLAY NONE */
@@ -46,7 +54,21 @@ p {
     border-radius: 32px;
     background-color: transparent;
     cursor: pointer;
+    opacity: 1;
+    transition: opacity .3s;
 }
+
+.btn:hover {
+    opacity: .5;
+}
+
+.go-premium {
+    background-color: var(--color-primary);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 32px;
+} 
 
 /* ANIMATION */
 @keyframes fadeIn {
@@ -58,28 +80,31 @@ p {
     }
 }
 
+
+/* Mixer */
 input {
     overflow: hidden;
-    width: 140px;
+    width: 160px;
     -webkit-appearance: none;
     background-color: #14141d;
-    border-radius: 4px;
+    border-radius: 32px;
+    margin:  0 20px;
 }
   
 input::-webkit-slider-runnable-track {
-    height: 21px;
+    height: 17px;
     -webkit-appearance: none;
     color: var(--color-primary);
     margin-top: -1px;
 }
   
 input::-webkit-slider-thumb {
-    width: 14px;
+    width: 17px;
     -webkit-appearance: none;
-    height: 21px;
+    height: 17px;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 50%;
+    margin-top: 0.5px;
     background: var(--color-default);
-    box-shadow: -80px 0 0 80px var(--color-primary);
+    box-shadow: -88px 0px 0 80px var(--color-primary);
 }
-

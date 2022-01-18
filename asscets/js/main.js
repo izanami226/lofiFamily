@@ -45,7 +45,7 @@ const audio = $('#audio')
 const songVolume = $$('.song-volume')
 
 // MIX MENU
-const menu = $$('.menu')
+const menus = $$('.menu')
 const menuItems = $$('.menu-item')
 
 //MENU MIX VOLUME
@@ -169,23 +169,6 @@ const app = {
             nextBtn.click()
         }
 
-        //FULLSCREEN
-        switchFullscreen.oninput = function() {
-            var elem = document.documentElement;
-            if (!switchFullscreen.checked) {
-                elem.requestFullscreen();
-                signupBtn.classList.add('none')
-                loginBtn.classList.add('none')
-                navigation.classList.add('none')             
-            } 
-            if (switchFullscreen.checked) {
-                document.exitFullscreen();
-                signupBtn.classList.remove('none')
-                loginBtn.classList.remove('none')
-                navigation.classList.remove('none') 
-            }            
-        }
-
         //// MENU CLICK  LOFI
         chillBtn.onclick = function() {
             _this.song.splice(0,_this.song.length)
@@ -239,7 +222,7 @@ const app = {
             pauseBtn.classList.remove('none')
         }
 
-        // MENU CLICK  RAP
+        // MENU CLICK  US_UK
         rapBtn.onclick = function() {
             _this.song.splice(0,_this.song.length)
             _this.song.push(
@@ -286,6 +269,30 @@ const app = {
                 {
                     name: '11',
                     path: './asscets/data/music/song/rap/11.mp3'
+                },
+                {
+                    name: '12',
+                    path: './asscets/data/music/song/rap/12.mp3'
+                },
+                {
+                    name: '13',
+                    path: './asscets/data/music/song/rap/13.mp3'
+                },
+                {
+                    name: '14',
+                    path: './asscets/data/music/song/rap/14.mp3'
+                },
+                {
+                    name: '15',
+                    path: './asscets/data/music/song/rap/15.mp3'
+                },
+                {
+                    name: '16',
+                    path: './asscets/data/music/song/rap/16.mp3'
+                },
+                {
+                    name: '17',
+                    path: './asscets/data/music/song/rap/17.mp3'
                 }
             )
             _this.loadCurrentSong()
@@ -391,6 +398,50 @@ const app = {
                 {
                     name: '19',
                     path: './asscets/data/music/song/rapLofi/19.mp3'
+                },
+                {
+                    name: '20',
+                    path: './asscets/data/music/song/rapLofi/20.mp3'
+                },
+                {
+                    name: '21',
+                    path: './asscets/data/music/song/rapLofi/21.mp3'
+                },
+                {
+                    name: '22',
+                    path: './asscets/data/music/song/rapLofi/22.mp3'
+                },
+                {
+                    name: '23',
+                    path: './asscets/data/music/song/rapLofi/23.mp3'
+                },
+                {
+                    name: '24',
+                    path: './asscets/data/music/song/rapLofi/24.mp3'
+                },
+                {
+                    name: '25',
+                    path: './asscets/data/music/song/rapLofi/25.mp3'
+                },
+                {
+                    name: '26',
+                    path: './asscets/data/music/song/rapLofi/26.mp3'
+                },
+                {
+                    name: '27',
+                    path: './asscets/data/music/song/rapLofi/27.mp3'
+                },
+                {
+                    name: '28',
+                    path: './asscets/data/music/song/rapLofi/28.mp3'
+                },
+                {
+                    name: '29',
+                    path: './asscets/data/music/song/rapLofi/29.mp3'
+                },
+                {
+                    name: '30',
+                    path: './asscets/data/music/song/rapLofi/30.mp3'
                 }
             )
             _this.loadCurrentSong()
@@ -467,6 +518,27 @@ const app = {
 // Start
 app.start()
 
+// FullScreen
+function toggleFullScreen() {
+    if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+        (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+        if (document.documentElement.requestFullScreen) {  
+            document.documentElement.requestFullScreen();  
+        } else if (document.documentElement.mozRequestFullScreen) {  
+            document.documentElement.mozRequestFullScreen();  
+        } else if (document.documentElement.webkitRequestFullScreen) {  
+            document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+        }  
+    } else {  
+        if (document.cancelFullScreen) {  
+            document.cancelFullScreen();  
+        } else if (document.mozCancelFullScreen) {  
+            document.mozCancelFullScreen();  
+        } else if (document.webkitCancelFullScreen) {  
+            document.webkitCancelFullScreen();  
+        }  
+    }  
+}
 
 // RAIN SWITCH
 function weatherSwitch() {
@@ -611,38 +683,40 @@ function songVolumeHandle(data) {
 }
 songVolumeHandle(songVolume)
 
-// Load Menu
-const menuItemOnclick = $$('.menu-item--onclick')
-const menuImg = $$('.menu-img')
+//Load Menu
+const menuItemsOnclick = $$('.menu-item--onclick')
+const menuIcons = $$('.menu-icon')
 function loadMenuItem(data) {
     data.forEach(function(menuItem, i) {
-        menuItem.onclick = function() {
-            menu[i].classList.toggle('none')
-            menuBride.classList.toggle('none')
-            menuImg[i].classList.toggle('menu-item--active')
+        const menuIcon = menuIcons[i]
+        const menu = menus[i]
+        menuItem.onclick = function() {    
+            menu.classList.toggle('none')
+            menuIcon.classList.toggle('menu-active')
         }
     })
 }
-loadMenuItem(menuItemOnclick)
+loadMenuItem(menuItemsOnclick)
+
 
 //Preloader
-const preloader = $('.preloader')
+// const preloader = $('.preloader')
 
-var promise = Promise.resolve()
+// var promise = Promise.resolve()
 
-promise 
-    .then(function() {
-        return new Promise((resolve) => {
-            setTimeout(function() {
-                preloader.classList.add('preloader-animation')
-                resolve(1)
-            }, 2000)
-        })
-    })
-    .then(function(data) {
-        if(data == 1) {
-            setTimeout(function() {
-                preloader.classList.add('none')
-            }, 2000)
-        }
-    })
+// promise 
+//     .then(function() {
+//         return new Promise((resolve) => {
+//             setTimeout(function() {
+//                 preloader.classList.add('preloader-animation')
+//                 resolve(1)
+//             }, 2000)
+//         })
+//     })
+//     .then(function(data) {
+//         if(data == 1) {
+//             setTimeout(function() {
+//                 preloader.classList.add('none')
+//             }, 2000)
+//         }
+//     })

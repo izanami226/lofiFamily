@@ -13,7 +13,7 @@
 </head>
 <body>
     <!-- Preloader -->
-    <div class="preloader">
+    <div class="preloader none">
         <div class="preloader-br">
             <img src="./asscets/data/img/logo/logo.0cbf9e63.gif" alt="">
         </div>
@@ -39,7 +39,7 @@
                     <img src="./asscets/data/img/logo/logo.0cbf9e63.gif" alt="">
             </div>      
     
-            <div class="header-nav">
+            <!-- <div class="header-nav">
                 <ul class="nav">
                     <button class="nav-item-btn btn">How it works</button>
                     <button class="nav-item-btn btn">Pricing</button>
@@ -54,23 +54,23 @@
                     </button>
                     <p class="new-tag">New!</p>                   
                 </ul>
-            </div>
+            </div> -->
     
             <div class="header-toobar">
                 <ul class="toobar">
                     <li class="toobar-item">
                         <label class="switch">
-                            <input class="btn-switch" id="day-check" onclick="weatherSwitch()" type="checkbox" checked>
+                            <input class="btn-switch btn" id="day-check" onclick="weatherSwitch()" type="checkbox" checked>
                                 <span class="slider"></span>
                                 <i class="sun-icon far fa-sun"></i>
                                 <i class="moon-icon far fa-moon"></i>
                         </label>
                     </li>
                     <li class="toobar-item">
-                        <input type="checkbox" class="switch-fullscreen">
+                        <input class="switch-fullscreen btn" type="button" onclick="toggleFullScreen()">
                         <img src="./asscets/data/img/fullscreen/fullscreen.png" alt="" class="full-screen">
                     </li>
-                    <li class="toobar-item">
+                    <!-- <li class="toobar-item">
                         <button class="share-item-btn toobar-btn btn">Share</button>
                     </li>
                     <li class="toobar-item">
@@ -78,7 +78,7 @@
                     </li>
                     <li class="toobar-item">
                         <button class="login-btn toobar-btn btn">Login</button>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -86,7 +86,7 @@
 
         <!-- BODY CONTENT -->
         <div class="content">
-            <div class="rain-traffic" style="display: flex; width: 100%; justify-content: space-between;">
+            <div class="rain-traffic">
                 <label class="traffic-switch">
                     <input class="btn-switch--traffic" id="traffic-check" onclick="trafficSwitch()" type="checkbox">
                         <span class="traffic-ckeck"></span>
@@ -118,17 +118,13 @@
                 <div class="menu-control-column">
                     <div class="menu-item">
                         <div class="mix-menu menu-item--onclick line-item">
-                            <img src="./asscets/data/img/controlMusic/mix.png" alt="" class="mix-img menu-img">
+                            <i class="ti-menu-alt menu-icon"></i>
                         </div>
-                        <div class="border-menu-item"></div>
 
                         <!-- MIX PANEL -->
-                        <img src="./asscets/data/img/controlMusic/mix/mixPNG/bridge.png" alt="" class="mix-bridge none">
                         <div class="menu none">
                             <div class="menu-mix-item">
                                 <h2 class="menu-title">Mood</h2>
-
-                                <source src="./asscets/data/music/song/rapLofi/1.mp3">
 
                                 <div class="mix-category">
                                     <div class="mix-category-item chill-btn">
@@ -137,7 +133,7 @@
                                     </div>
                                     <div class="mix-category-item rap-btn">
                                         <img src="./asscets/data/img/controlMusic/mix/jazz.png" alt="" class="mix-category-img mix-category-item--no-active">
-                                        <p class=" mix-category-item-title">Rap</p>
+                                        <p class=" mix-category-item-title">Us - Uk</p>
                                     </div>
                                     <div class="mix-category-item rap-lofi-btn">
                                         <img src="./asscets/data/img/controlMusic/mix/coffee.png" alt="" class="mix-category-img mix-category-item--no-active">
@@ -211,23 +207,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="menu-item">
-                        <div class="template-menu menu-item--onclick line-item">
-                            <img src="./asscets/data/img/controlMusic/template.png" alt="" class="template-img menu-img">
-                        </div>
-                        <div class="border-menu-item"></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="brchange-menu menu-item--onclick line-item">
-                            <img src="./asscets/data/img/controlMusic/brChange.png" alt="" class="brchange-img menu-img">
-                        </div>
-                        <div class="border-menu-item"></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="focus-menu menu-item--onclick">
-                            <img src="./asscets/data/img/controlMusic/focusMode.png" alt="" class="focus-img menu-img">
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -250,24 +229,18 @@
             </div>
             <audio src="" id="audio"></audio>
         </div>
-    </div>
-    <source src="./asscets/data/music/song/1.mp3">
-    
-    <!-- MODAL -->
-         <!-- TOTURIAL MODAL -->
-         <div class="toturial">
-            <div class="toturial-modal">
-                <video src="" class="toturial-video"></video>
-                <div class="toturial-bar"></div>
-                <div class="toturial-content">
-                    <h2 class="toturial-heading"></h2>
-                    <p class="toturial-about"></p>
-                    <button class="toturial-next-btn btn">Next</button>
-                    <button class="toturial-leave btn">Leave Toturial</button>
-                </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="footer-design">
+                <p class="footer-made-by">Made by - Lofi Family</p>
             </div>
         </div>
+
+    </div>
     
-</body>
+
+   
     <script src="./asscets/js/main.js"></script>
+</body>
 </html>
