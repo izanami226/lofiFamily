@@ -67,11 +67,43 @@
         position: absolute;
         top: -80px;
         right: 60px;
+        width: 268px;
+    }
+
+    .mix-category-item {
+        width: 70px;
+        height: 70px;
+    }
+
+    .mix-category-item-title {
+        bottom: 6px;
+        font-size: 1.5rem;
+    }
+
+    .mix-category-img {
+        top: -38px;
     }
 
     .background-noises {
-        height: 260px;
+        height: 222px;
         overflow-y: scroll;
+    }
+
+    .mix-noises-name {
+        margin-right: 0;
+    }
+
+    input {
+        overflow: hidden;
+        width: 160px;
+        -webkit-appearance: none;
+        background-color: #14141d;
+        border-radius: 32px;
+        margin: 0 20px;
+        margin-top: 0px;
+        margin-right: 20px;
+        margin-bottom: 0px;
+        margin-left: 0;
     }
 
     .footer {
@@ -82,5 +114,6 @@
 
     .footer-made-by {
         opacity: .3;
+        font-size: 1.3rem;
     }
 }
