@@ -67,7 +67,7 @@ const menuMix = $('.menu-mix')
         const menuCateloryImgs = $$('.mix-category-img')
         const menuCateloryTitle = $$('.mix-category-item-title')
 
-
+// APP
 const app = {
     currentIndex : 0,
     isPlaying: false,
@@ -120,7 +120,7 @@ const app = {
     handleEvents: function() {
         const _this = this;
 
-        // Handle click PLAY
+        // Handle click PAUSE
         pauseBtn.onclick = function() {
             if (_this.isPlaying) {
                 audio.pause()

@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lofi - Family</title>
     <link rel="icon" href="./asscets/data/img/logo/cflogopng.png" type="image/x-icon">
-    <link rel="stylesheet" href="./asscets/css/base.css">
     <link rel="stylesheet" href="./asscets/css/main.css">
+    <link rel="stylesheet" href="./asscets/css/base.css">
+    <link rel="stylesheet" href="./asscets/css/responsive.css">
     <link rel="stylesheet" href="./asscets/font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./asscets/font/fontawesome-free-5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&display=swap" rel="stylesheet">
@@ -118,11 +119,11 @@
                 <div class="menu-control-column">
                     <div class="menu-item">
                         <div class="mix-menu menu-item--onclick line-item">
-                            <i class="ti-menu-alt menu-icon"></i>
+                            <i class="ti-menu-alt menu-icon menu-active"></i>
                         </div>
 
                         <!-- MIX PANEL -->
-                        <div class="menu none">
+                        <div class="menu">
                             <div class="menu-mix-item">
                                 <h2 class="menu-title">Mood</h2>
 
@@ -215,15 +216,23 @@
         <!-- MUSIC CONTENT -->
         <div class="music-player">
             <div class="music">
-                <img src="./asscets/data/img/musicPlayer/prev.png" alt="" id="prev">
-                <img src="./asscets/data/img/musicPlayer/play.png" alt="" id="play" class="play">              
-                <img src="./asscets/data/img/musicPlayer/pause.png" alt="" id="pause" class="pause none">              
-                <img src="./asscets/data/img/musicPlayer/next.png" alt="" id="next">
+                <div id="prev">
+                    <i class="fas fa-backward"></i>
+                </div>
+                <div class="play" id="play">
+                    <i class="far fa-play-circle"></i>
+                </div>
+                <div class="pause none" id="pause">
+                    <i class="far fa-pause-circle"></i>          
+                </div>
+                <div id="next">
+                    <i class="fas fa-forward"></i>
+                </div>
             </div>
             <div class="volume-player">
                 <div class="volume-mix">
                     <img src="./asscets/data/img/controlMusic/mix/lowAudio.png" alt="" class="audio-low">
-                    <input class="song-volume" id="song-volume" type="range" value="60" min="0" max="100" step="1">
+                    <input class="song-volume" id="song-volume" type="range" value="55" min="0" max="100" step="1">
                     <img src="./asscets/data/img/controlMusic/mix/highAudio.png" alt="" class="audio-high">
                 </div>
             </div>
