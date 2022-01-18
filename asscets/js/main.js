@@ -700,23 +700,23 @@ loadMenuItem(menuItemsOnclick)
 
 
 //Preloader
-// const preloader = $('.preloader')
+const preloader = $('.preloader')
 
-// var promise = Promise.resolve()
+var promise = Promise.resolve()
 
-// promise 
-//     .then(function() {
-//         return new Promise((resolve) => {
-//             setTimeout(function() {
-//                 preloader.classList.add('preloader-animation')
-//                 resolve(1)
-//             }, 2000)
-//         })
-//     })
-//     .then(function(data) {
-//         if(data == 1) {
-//             setTimeout(function() {
-//                 preloader.classList.add('none')
-//             }, 2000)
-//         }
-//     })
+promise 
+    .then(function() {
+        return new Promise((resolve) => {
+            setTimeout(function() {
+                preloader.classList.add('preloader-animation')
+                resolve(1)
+            }, 2000)
+        })
+    })
+    .then(function(data) {
+        if(data == 1) {
+            setTimeout(function() {
+                preloader.classList.add('none')
+            }, 2000)
+        }
+    })
