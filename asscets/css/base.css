@@ -108,3 +108,16 @@ input::-webkit-slider-thumb {
     background: var(--color-default);
     box-shadow: -88px 0px 0 80px var(--color-primary);
 }
+
+/* Img musicplay size */
+.img-music-pl {
+    width: 60px;
+    height: 60px;
+    filter: invert(100%);
+}
+
+.img-music-nx-pv {
+    width: 30px;
+    height: 30px;
+    filter: invert(120%);
+}

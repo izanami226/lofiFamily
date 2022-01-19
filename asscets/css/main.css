@@ -584,7 +584,7 @@ input:checked + ::before {
 #play, #pause {
     color: var(--color-default);
     font-size: 6rem;
-    margin: 0 20px;
+    margin: 0 18px;
 }
 
 #next {
@@ -595,10 +595,11 @@ input:checked + ::before {
     margin-right: 3px;
 }
 
+
 .volume-player {
     position: absolute;
     bottom: -34px;
-    left: -4px;
+    left: -3px;
 }
 
 .volume-mix {
@@ -660,8 +661,8 @@ input:checked + ::before {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.65);
     border-radius: 35px;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     /* overflow: hidden; */
 }
 
@@ -671,10 +672,17 @@ input:checked + ::before {
 }
 
 .menu-item--onclick {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     overflow: hidden;
     z-index: 2;
+}
+
+.menu-item--onclick i {
+    font-size: 2.4rem;
+    position: relative;
+    top: 0px;
+    left: -0.5px;
 }
 
 .menu-item--active {
@@ -758,7 +766,7 @@ input:checked + ::before {
 .menu {
     position: absolute;
     top: -168px;
-    right: 70px;
+    right: 60px;
     width: 313px;
     height: 466px;
     /* overflow: hidden; */
@@ -815,6 +823,23 @@ input:checked + ::before {
     position: absolute;
     top: -34px;
     width: 120px;
+}
+
+.mix-category-item:nth-child(1) .mix-category-img {
+    position: absolute;
+    left: -15px;
+}
+
+.mix-category-item:nth-child(2) .mix-category-img {
+    position: absolute;
+    left: -16px;
+    top: -36px;
+}
+
+.mix-category-item:nth-child(3) .mix-category-img {
+    position: absolute;
+    left: -16px;
+    top: -31px;
 }
 
 .mix-category-item-title {

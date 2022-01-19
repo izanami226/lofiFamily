@@ -42,9 +42,16 @@
     }
 
     .menu-control-column {
-        border-radius: 12px;
+        border-radius: 32px;
         width: 60px;
         height: 60px;
+    }
+
+    .menu-control-column i {
+        font-size: 2.6rem;
+        position: relative;
+        top: -0.5px;
+        left: 0;
     }
 
     .menu-item--onclick {
@@ -82,6 +89,23 @@
 
     .mix-category-img {
         top: -38px;
+    }
+
+    .mix-category-item:nth-child(1) .mix-category-img {
+        position: absolute;
+        left: -21px;
+    }
+    
+    .mix-category-item:nth-child(2) .mix-category-img {
+        position: absolute;
+        left: -20px;
+        top: -39px;
+    }
+    
+    .mix-category-item:nth-child(3) .mix-category-img {
+        position: absolute;
+        left: -25px;
+        top: -34px;
     }
 
     .background-noises {
